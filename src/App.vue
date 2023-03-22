@@ -62,11 +62,10 @@ export default {
   },
   methods: {
     async fetchWeather(e) {
-      console.log(this.cssVars);
       try {
         if (e.key == "Enter") {
           this.error = null;
-          await this.$store.dispatch("loadWeatherData", this.query);
+          await this.$store.dispatch("loadWeatherData", this.query.trim());
           this.query = "";
         }
       } catch (error) {

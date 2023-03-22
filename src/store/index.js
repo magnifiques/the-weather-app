@@ -27,7 +27,6 @@ const store = createStore({
       const responseData = await response.json();
 
       if (!response.ok) {
-        console.log(response);
         throw new Error(
           "Something went Wrong! Check your input and give it another try"
         );
